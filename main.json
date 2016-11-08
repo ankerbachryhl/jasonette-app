@@ -1,0 +1,36 @@
+{
+  "$jason": {
+    "head": {
+      "actions": {
+        "$load": {
+          "type": "$set",
+          "options": {
+            "bar": "#"
+          },
+          "success": {
+            "type": "$render"
+          }
+        },
+        "$pull": {
+          "type": "$set",
+          "options": {
+            "bar": "{{$get.bar+'#'}}"
+          },
+          "success": {
+            "type": "$render"
+          }
+        }
+      },
+      "templates": {
+        "body": {
+          "sections": [{
+            "items": [{
+              "type": "label",
+              "text": "{{$get.bar}}"
+            }]
+          }]
+        }
+      }
+    }
+  }
+}
