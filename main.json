@@ -26,7 +26,11 @@
       "header": {
         "title": "[Title goes here]",
         "menu": {
-          "text": "Press me",
+          "text": "View JSON",
+          "href": {
+            "url": "http://www.jasonbase.com/things/qp5/edit",
+            "view": "web"
+          }
         },
         "style": {
           "font": "AvenirNext-Heavy",
@@ -44,6 +48,17 @@
           }
         }
       },
+      {
+        "type": "label",
+        "text": "Press me",
+        "action": {
+          "type": "$util.banner",
+          "options": {
+            "title": "Finalllyyyyyy",
+            "description": "Im awesome"
+          }
+        }
+      }
     }
   }
 }
