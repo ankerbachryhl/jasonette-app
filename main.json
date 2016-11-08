@@ -51,17 +51,6 @@
           }
         }
       },
-      {
-        "type": "label",
-        "text": "Press me",
-        "action": {
-          "type": "$util.banner",
-          "options": {
-            "title": "Finalllyyyyyy",
-            "description": "Im awesome"
-          }
-        }
-      }
     }
   }
 }
