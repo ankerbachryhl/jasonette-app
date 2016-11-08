@@ -1,54 +1,33 @@
 {
   "$jason": {
     "head": {
-      "title": "This is awesome",
-      "styles": {
-        "bold": {
-          "font": "HelveticaNeue-CondensedBold",
-          "padding": "10",
-          "size": "15"
-        },
-        "normal": {
-          "font": "HelveticaNeue",
-          "size": "12"
-        }
-      },
+      "title": "Jasonette"
     },
     "body": {
-      "header": {
-        "title": "[Title goes here]",
-        "menu": {
-          "text": "View JSON",
-          "href": {
-            "url": "http://www.jasonbase.com/things/qp5/edit",
-            "view": "web"
+      "sections": [{
+        "items": [
+          {
+            "type": "vertical",
+            "components": [
+              {
+                "type": "label",
+                "text": "Back to basic",
+                "style": {
+                  "font": "HelveticaNeue-Bold", "size": "14"
+                }
+              },
+              {
+                "type": "label",
+                "text": "Lets go starting with this",
+                "style": {
+                  "color": "#cecece", "size": "12"
+                }
+              },
+            ]
           }
-        },
-        "style": {
-          "font": "AvenirNext-Heavy",
-          "size": "18"
-        }
-      },
-      {
-        "type": "label",
-        "text": "Touch me",
-        "action": {
-          "type": "$network.request",
-          "options": {
-            "url": "https://www.jasonclient.org/items.json"
-          },
-          "success": {
-            "type": "$render"
-          },
-          "error": {
-            "type": "$util.banner",
-            "options": {
-              "title": "Error",
-              "description": "Uh oh, something went wrong."
-            }
-          }
-        }
-      }
+
+        ]
+      }]
     }
   }
 }
