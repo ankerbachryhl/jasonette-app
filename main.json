@@ -26,10 +26,13 @@
       "header": {
         "title": "[Title goes here]",
         "menu": {
-          "text": "View JSON",
-          "href": {
-            "url": "http://www.jasonbase.com/things/qp5/edit",
-            "view": "web"
+          "text": "Press me",
+          "action": {
+            "type": "$util.alert",
+            "options": {
+              "title": "Good job!",
+              "description": "You know how to press a button!"
+            }
           }
         },
         "style": {
