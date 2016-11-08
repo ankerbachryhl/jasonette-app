@@ -120,23 +120,13 @@
           "text": "Map with pins"
         },
         "items": [{
-          "type": "map",
-          "region": {
-            "coord": "40.7197614,-73.9909211",
-            "width": "100",
-            "height": "100"
-          },
-          "pins": [{
-            "title": "This is a pin",
-            "description": "It really is.",
-            "coord": "40.7197614,-73.9909211",
-            "style": {
-              "selected": "true"
+          "type": "$geo.get",
+          "success": {
+            "type": "$util.banner",
+            "options": {
+              "title": "Your current coordinate",
+              "description": "{{$jason.coord}}"
             }
-          }],
-          "style": {
-            "width": "100%",
-            "height": "300"
           }
         }]
       }]
