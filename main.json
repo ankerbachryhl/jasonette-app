@@ -13,14 +13,6 @@
           "size": "12"
         }
       },
-      "actions": {
-        "$load": {
-          "type": "$render"
-        },
-        "$foreground": {
-          "type": "$reload"
-        }
-      }
     },
     "body": {
       "header": {
@@ -35,41 +27,28 @@
         "style": {
           "font": "AvenirNext-Heavy",
           "size": "18"
-        },
-        "search": {
-          "name": "query",
-          "placeholder": "Enter keyword",
-          "action": {
-            "type": "$util.banner",
-            "options": {
-              "title": "{{$get.query}}",
-              "description": "The content inside the search input is {{$get.query}}"
-            }
-          }
         }
       },
-      "layers": [
-        {
-          "type": "label",
-          "text": "Press me",
-          "action": {
-            "type": "$network.request",
+      {
+        "type": "label",
+        "text": "Touch me",
+        "action": {
+          "type": "$network.request",
+          "options": {
+            "url": "https://www.jasonclient.org/items.json"
+          },
+          "success": {
+            "type": "$render"
+          },
+          "error": {
+            "type": "$util.banner",
             "options": {
-              "url": "https://jasonbase.com/things/jYJ.json"
-            },
-            "success": {
-              "type": "$render"
-            },
-            "error": {
-              "type": "$util.banner",
-              "options": {
-                "title": "Error",
-                "description": "Something went wrong."
-              }
+              "title": "Error",
+              "description": "Uh oh, something went wrong."
             }
           }
         }
-      ]
+      }
     }
   }
 }
