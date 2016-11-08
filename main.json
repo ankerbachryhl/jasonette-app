@@ -46,8 +46,14 @@
                   "width": "100%",
                   "height": "150"
                 }
+              },
+              "error": {
+                "type": "$util.banner",
+                "options": {
+                  "title": "Error",
+                  "description": "Something went wrong."
+                }
               }
-
           }]
         },
         "items": [{
