@@ -19,22 +19,6 @@
         },
         "$foreground": {
           "type": "$reload"
-        },
-        "show_json": {
-          "type": "$network.request",
-          "options": {
-            "url": "https://jasonbase.com/things/jYJ.json"
-          },
-          "success": {
-            "type": "$render"
-          },
-          "error": {
-            "type": "$util.banner",
-            "options": {
-              "title": "Error",
-              "description": "Something went wrong."
-            }
-          }
         }
       }
     },
@@ -64,20 +48,27 @@
           }
         }
       },
-      "sections": [{
-        "items": [
-          {
-            "type": "vertical",
-            "components": [{
-              "type": "label",
-              "text": "press this",
-              "action": {
-                "trigger": "show_json"
+      "layers": [
+        {
+          "type": "label",
+          "action": {
+            "type": "$network.request",
+            "options": {
+              "url": "https://jasonbase.com/things/jYJ.json"
+            },
+            "success": {
+              "type": "$render"
+            },
+            "error": {
+              "type": "$util.banner",
+              "options": {
+                "title": "Error",
+                "description": "Something went wrong."
               }
-            }]
+            }
           }
-        ]
-        }]
+        }
+      ]
     }
   }
 }
