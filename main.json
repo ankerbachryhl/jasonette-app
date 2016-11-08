@@ -27,13 +27,6 @@
         "title": "[Title goes here]",
         "menu": {
           "text": "Press me",
-          "action": {
-            "type": "$util.alert",
-            "options": {
-              "title": "Good job!",
-              "description": "You know how to press a button!"
-            }
-          }
         },
         "style": {
           "font": "AvenirNext-Heavy",
