@@ -48,19 +48,17 @@
           }
         }
       },
-      "layers": [
-        {
-          "type": "label",
-          "text": "Press me",
-          "action": {
-            "type": "$util.banner",
-            "options": {
-              "title": "Finalllyyyyyy",
-              "description": "Im awesome"
-            }
+      {
+        "type": "label",
+        "text": "Press me",
+        "action": {
+          "type": "$util.banner",
+          "options": {
+            "title": "Finalllyyyyyy",
+            "description": "Im awesome"
           }
         }
-      ]
+      }
     }
   }
 }
