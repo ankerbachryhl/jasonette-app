@@ -1,35 +1,51 @@
 {
   "$jason": {
     "head": {
-      "title": "This is AWESOME",
-      "actions": {
-        "$load": {
-          "type": "$set",
-          "options": {
-            "bar": "#"
-          },
-          "success": {
-            "type": "$render"
-          }
+      "title": "This is awesome",
+      "styles": {
+        "bold": {
+          "font": "HelveticaNeue-CondensedBold",
+          "padding": "10",
+          "size": "15"
         },
-        "$pull": {
-          "type": "$set",
-          "options": {
-            "bar": "{{$get.bar+'#'}}"
-          },
-          "success": {
-            "type": "$render"
-          }
+        "normal": {
+          "font": "HelveticaNeue",
+          "size": "12"
         }
       },
-      "templates": {
-        "body": {
-          "sections": [{
-            "items": [{
-              "type": "label",
-              "text": "{{$get.bar}}"
-            }]
-          }]
+      "actions": {
+        "$load": {
+          "type": "$render"
+        },
+        "$foreground": {
+          "type": "$reload"
+        }
+      }
+    },
+    "body": {
+      "header": {
+        "title": "[Title goes here]",
+        "menu": {
+          "text": "View JSON",
+          "href": {
+            "url": "http://www.jasonbase.com/things/qp5/edit",
+            "view": "web"
+          }
+        },
+        "style": {
+          "font": "AvenirNext-Heavy",
+          "size": "18"
+        },
+        "search": {
+          "name": "query",
+          "placeholder": "Enter keyword",
+          "action": {
+            "type": "$util.banner",
+            "options": {
+              "title": "{{$get.query}}",
+              "description": "The content inside the search input is {{$get.query}}"
+            }
+          }
         }
       }
     }
