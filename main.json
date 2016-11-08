@@ -90,15 +90,25 @@
           "text": "Map with 200x200 region"
         },
         "items": [{
-          "type": "map",
-          "region": {
-            "coord": "40.7197614,-73.9909211",
-            "width": "200",
-            "height": "200"
-          },
-          "style": {
-            "width": "100%",
-            "height": "300"
+          "type": "$geo.get",
+            "success": {
+              "type": "map",
+              "region": {
+                "coord": "{{$jason.coord}}",
+                "width": "200",
+                "height": "200"
+              },
+              "style": {
+                "width": "100%",
+                "height": "150"
+              }
+            },
+            "error": {
+              "type": "$util.banner",
+              "options": {
+                "title": "Error",
+                "description": "Something went wrong."
+            }
           }
         }]
       }, {
