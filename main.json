@@ -1,6 +1,7 @@
 {
   "$jason": {
     "head": {
+      "title": "This is AWESOME",
       "actions": {
         "$load": {
           "type": "$set",
